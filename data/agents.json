@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-04",
+  "agents": [
+    {
+      "id": "atomic-agent",
+      "name": "Atomic Agent",
+      "repository": "https://github.com/AtomicBot-ai/atomic-agent",
+      "summary": "Local-first terminal agent with llama.cpp-oriented inference and explicit engineering for small quantized models.",
+      "implementation": "TypeScript",
+      "license": null,
+      "status": "active",
+      "localSupport": "local-first",
+      "backends": [
+        "llama.cpp",
+        "OpenAI-compatible"
+      ],
+      "offline": "yes",
+      "smallModelStatus": "candidate",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/AtomicBot-ai/atomic-agent/blob/main/README.md",
+          "note": "README describes the agent as local-first and says llama.cpp is used so small quantized models remain useful on consumer hardware."
+        }
+      ]
+    },
+    {
+      "id": "hax",
+      "name": "hax",
+      "repository": "https://github.com/OleksandrChekhovskyi/hax",
+      "summary": "Minimal C terminal coding agent whose low memory footprint leaves more resources available for local inference.",
+      "implementation": "C",
+      "license": "MIT",
+      "status": "active",
+      "localSupport": "local-first",
+      "backends": [
+        "llama.cpp",
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "yes",
+      "smallModelStatus": "candidate",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/OleksandrChekhovskyi/hax/blob/master/README.md",
+          "note": "README calls local models first-class, documents llama.cpp and Ollama, and emphasizes a very small agent memory footprint."
+        }
+      ]
+    },
+    {
+      "id": "nanocoder",
+      "name": "Nanocoder",
+      "repository": "https://github.com/Nano-Collective/nanocoder",
+      "summary": "Community-built local-first coding agent supporting local models through Ollama plus OpenAI-compatible APIs.",
+      "implementation": "TypeScript",
+      "license": null,
+      "status": "active",
+      "localSupport": "local-first",
+      "backends": [
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "yes",
+      "smallModelStatus": "unverified",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/Nano-Collective/nanocoder/blob/main/README.md",
+          "note": "README describes Nanocoder as local-first and documents Ollama as a local model provider."
+        }
+      ]
+    },
+    {
+      "id": "swival",
+      "name": "Swival",
+      "repository": "https://github.com/Swival/swival",
+      "summary": "Coding agent designed to give smaller and local models careful context management and a consistent agent workflow.",
+      "implementation": "Python",
+      "license": null,
+      "status": "active",
+      "localSupport": "local-first",
+      "backends": [
+        "llama.cpp",
+        "Ollama",
+        "vLLM",
+        "MLX",
+        "LocalAI",
+        "OpenAI-compatible"
+      ],
+      "offline": "yes",
+      "smallModelStatus": "candidate",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/Swival/swival/blob/master/README.md",
+          "note": "README explicitly states that smaller models receive the same attention as large models."
+        },
+        {
+          "type": "documentation",
+          "url": "https://github.com/Swival/swival/blob/master/docs.md/providers.md",
+          "note": "Provider documentation covers llama.cpp and generic local OpenAI-compatible servers including Ollama, vLLM and LocalAI."
+        }
+      ]
+    },
+    {
+      "id": "goose",
+      "name": "goose",
+      "repository": "https://github.com/aaif-goose/goose",
+      "summary": "Rust agent with CLI support, an Ollama provider, local inference options, and tooling to improve compatibility with weaker tool-calling models.",
+      "implementation": "Rust",
+      "license": "Apache-2.0",
+      "status": "active",
+      "localSupport": "local-capable",
+      "backends": [
+        "Ollama",
+        "llama.cpp"
+      ],
+      "offline": "conditional",
+      "smallModelStatus": "candidate",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/aaif-goose/goose/blob/main/README.md",
+          "note": "README documents a full CLI and Ollama provider support."
+        },
+        {
+          "type": "source",
+          "url": "https://github.com/aaif-goose/goose/blob/main/documentation/docs/guides/tool-shim.md",
+          "note": "Tool-shim guide addresses locally hosted models that do not natively produce reliable tool calls."
+        }
+      ]
+    },
+    {
+      "id": "agentty",
+      "name": "agentty",
+      "repository": "https://github.com/1ay1/agentty",
+      "summary": "Native C++ terminal agent with local Ollama support, local retrieval, and aggressive context reduction.",
+      "implementation": "C++",
+      "license": "MIT",
+      "status": "active",
+      "localSupport": "local-capable",
+      "backends": [
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "yes",
+      "smallModelStatus": "candidate",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/1ay1/agentty/blob/master/README.md",
+          "note": "README documents fully local Ollama models, local retrieval, and reduced repository context."
+        }
+      ]
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "repository": "https://github.com/Aider-AI/aider",
+      "summary": "Mature terminal pair-programming agent with documented Ollama and local OpenAI-compatible model support.",
+      "implementation": "Python",
+      "license": null,
+      "status": "active",
+      "localSupport": "local-capable",
+      "backends": [
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "conditional",
+      "smallModelStatus": "unverified",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/Aider-AI/aider/blob/main/aider/website/docs/llms.md",
+          "note": "Aider documentation explicitly supports local models through Ollama and local OpenAI-compatible APIs."
+        }
+      ]
+    },
+    {
+      "id": "tau",
+      "name": "Tau",
+      "repository": "https://github.com/huggingface/tau",
+      "summary": "Small readable terminal coding-agent harness with local providers through llama.cpp and OpenAI-compatible endpoints.",
+      "implementation": "Python",
+      "license": null,
+      "status": "active",
+      "localSupport": "local-capable",
+      "backends": [
+        "llama.cpp",
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "conditional",
+      "smallModelStatus": "unverified",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "documentation",
+          "url": "https://github.com/huggingface/tau/blob/main/website/content/guides/providers-and-models.md",
+          "note": "Provider guide documents local OpenAI-compatible endpoints including llama.cpp and Ollama."
+        }
+      ]
+    },
+    {
+      "id": "forge",
+      "name": "Forge",
+      "repository": "https://github.com/andreglegg/forge",
+      "summary": "Provider-agnostic TypeScript coding harness with local endpoint model discovery for llama.cpp, LM Studio, vLLM and Ollama.",
+      "implementation": "TypeScript",
+      "license": "Apache-2.0",
+      "status": "active",
+      "localSupport": "local-capable",
+      "backends": [
+        "llama.cpp",
+        "LM Studio",
+        "vLLM",
+        "Ollama",
+        "OpenAI-compatible"
+      ],
+      "offline": "conditional",
+      "smallModelStatus": "unverified",
+      "smallestVerifiedModel": null,
+      "benchmarkResults": [],
+      "lastReviewed": "2026-10-04",
+      "evidence": [
+        {
+          "type": "source",
+          "url": "https://github.com/andreglegg/forge/blob/main/src/provider.ts",
+          "note": "Provider implementation explicitly discovers models from llama.cpp, LM Studio, vLLM and Ollama endpoints."
+        }
+      ]
+    }
+  ]
+}

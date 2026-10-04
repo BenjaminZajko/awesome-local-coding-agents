@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "task": {
+    "id": "t2",
+    "version": 1
+  },
+  "agent": {
+    "id": "replace-me",
+    "version": "commit-or-release"
+  },
+  "model": {
+    "id": "replace-me",
+    "family": "replace-me",
+    "totalParametersB": 0,
+    "activeParametersB": null,
+    "quantization": "replace-me"
+  },
+  "runtime": {
+    "backend": "replace-me",
+    "version": "replace-me",
+    "contextTokens": 0
+  },
+  "hardware": {
+    "os": "replace-me",
+    "cpu": "replace-me",
+    "gpu": "replace-me",
+    "systemRamGB": 0,
+    "acceleratorMemoryGB": 0,
+    "memoryType": "VRAM-or-unified"
+  },
+  "execution": {
+    "command": "secrets-removed",
+    "startedAt": "YYYY-MM-DDTHH:mm:ssZ",
+    "elapsedSeconds": 0,
+    "manualInterventions": 0,
+    "networkEnabled": false
+  },
+  "outcome": {
+    "passed": false,
+    "toolCallFailures": 0,
+    "agentTurns": null,
+    "inputTokens": null,
+    "outputTokens": null,
+    "verifier": "replace-me"
+  },
+  "notes": ""
+}

@@ -1,0 +1,58 @@
+name: Add or update an agent
+description: Propose a CLI coding agent with documented local inference support
+title: "[Agent]: "
+labels: []
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      description: Public GitHub repository URL
+    validations:
+      required: true
+
+  - type: textarea
+    id: local-evidence
+    attributes:
+      label: Local inference evidence
+      description: Link first-party docs/source showing the supported local path.
+    validations:
+      required: true
+
+  - type: input
+    id: backends
+    attributes:
+      label: Local backends
+      placeholder: "Ollama, llama.cpp, LM Studio, vLLM..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Proposed profile
+      options:
+        - Local-first
+        - Local-capable
+    validations:
+      required: true
+
+  - type: textarea
+    id: small-model
+    attributes:
+      label: Small-model evidence
+      description: Leave performance claims out unless you have reproducible benchmark evidence. If proposing Candidate, explain the engineering reason.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Eligibility
+      options:
+        - label: The project has a CLI or terminal interface.
+          required: true
+        - label: It can operate on a codebase.
+          required: true
+        - label: It has a documented local inference path.
+          required: true
+        - label: It is not archived/read-only.
+          required: true

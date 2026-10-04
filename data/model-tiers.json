@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "policy": "Tiers use total parameter count. Quantization does not change the tier. MoE active parameters should be recorded separately.",
+  "tiers": [
+    {
+      "id": "tiny",
+      "label": "Tiny",
+      "minExclusiveB": null,
+      "maxInclusiveB": 4
+    },
+    {
+      "id": "small",
+      "label": "Small",
+      "minExclusiveB": 4,
+      "maxInclusiveB": 14
+    },
+    {
+      "id": "medium-local",
+      "label": "Medium-local",
+      "minExclusiveB": 14,
+      "maxInclusiveB": 32
+    },
+    {
+      "id": "large-local",
+      "label": "Large-local",
+      "minExclusiveB": 32,
+      "maxInclusiveB": null
+    }
+  ]
+}
